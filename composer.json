@@ -1,14 +1,18 @@
 {
-    "name": "jurager/sender",
+    "name": "sms-assistent/laravel-sender",
     "description": "Laravel provider for sending sms messages by SMS-assistent.by",
     "keywords": [
         "SMS", "Queued", "Laravel", "SMS-assistent.by"
     ],
-    "homepage": "https://github.com/jurager/sender",
+    "homepage": "https://github.com/sms-assistent/laravel-sender",
     "license": "MIT",
     "authors": [{
         "name": "Gerassimov Yuri",
         "email": "jurager01@gmail.com",
+        "role": "Developer"
+    },{
+        "name": "Koshelev Andrei",
+        "email": "info@koshelev.top",
         "role": "Developer"
     }],
     "require": {
@@ -16,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Jurager\\Sender\\": "src"
+            "SmsAssistent\\Sender\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jurager\\Sender\\SenderServiceProvider"
+                "SmsAssistent\\Sender\\SenderServiceProvider"
             ]
         }
     }

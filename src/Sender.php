@@ -1,6 +1,6 @@
 <?php
 
-namespace Jurager\Sender;
+namespace SmsAssistent\Sender;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Lang;

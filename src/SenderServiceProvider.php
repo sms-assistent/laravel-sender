@@ -1,6 +1,6 @@
 <?php 
 
-namespace Jurager\Sender;
+namespace SmsAssistent\Sender;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -52,7 +52,7 @@ class SenderServiceProvider extends ServiceProvider
             return new Sender($app);
         });
 
-        $this->app->alias('sender', 'Jurager\Sender');
+        $this->app->alias('sender', 'SmsAssistent\Sender');
     }
 
 

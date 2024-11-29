@@ -1,8 +1,8 @@
-# Jurager/Sender
-[![Latest Stable Version](https://poser.pugx.org/jurager/sender/v/stable)](https://packagist.org/packages/jurager/sender)
-[![Total Downloads](https://poser.pugx.org/jurager/sender/downloads)](https://packagist.org/packages/jurager/sender)
-[![PHP Version Require](http://poser.pugx.org/jurager/sender/require/php)](https://packagist.org/packages/jurager/sender)
-[![License](https://poser.pugx.org/jurager/sender/license)](https://packagist.org/packages/jurager/sender)
+# SmsAssistent/Sender
+[![Latest Stable Version](https://poser.pugx.org/sms-assistent/laravel-sender/v/stable)](https://packagist.org/packages/sms-assistent/laravel-sender)
+[![Total Downloads](https://poser.pugx.org/sms-assistent/laravel-sender/downloads)](https://packagist.org/packages/sms-assistent/laravel-sender)
+[![PHP Version Require](http://poser.pugx.org/sms-assistent/laravel-sender/require/php)](https://packagist.org/packages/sms-assistent/laravel-sender)
+[![License](https://poser.pugx.org/sms-assistent/laravel-sender/license)](https://packagist.org/packages/sms-assistent/laravel-sender)
 
 Sender - Laravel Provider for SMS-assistent.by
 
@@ -10,18 +10,18 @@ Sender - Laravel Provider for SMS-assistent.by
 ## Installation
 
 ``` bash
-$ composer require jurager/sender
+$ composer require sms-assistent/laravel-sender
 ```
 
 Add to config/app.php in section ```aliases```:
 
 ``` php
-'Sender' => Jurager\Sender\Sender::class,
+'Sender' => SmsAssistent\Sender\Sender::class,
 ```
 
 Publish package files by running 
 ```
-php artisan vendor:publish --provider="Jurager\Sender\SenderServiceProvider"
+php artisan vendor:publish --provider="SmsAssistent\Sender\SenderServiceProvider"
 ```
 ## Usage
 
@@ -31,7 +31,7 @@ Now, if you have configured ```Queues```, you can create a ```Job``` like this b
 
 namespace App\Jobs;
 
-use Jurager\Sender\Sender;
+use SmsAssistent\Sender\Sender;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -68,7 +68,7 @@ use App\Jobs\SMS;
 
 class SampleController
 {
-    $this->dispatch((new SMS( '+71234567890', 'Hello world!')))->delay(5));
+    $this->dispatch((new SMS( '+375295363600', 'Hello world!')))->delay(5));
 }
 ```
 
