@@ -29,6 +29,6 @@ return [
     | Name will be displayed to recipients
     |--------------------------------------------------------------------------
     */
-    'name' => env('SENDER_NAME', 'John Doe'),
+    'name' => env('SENDER_NAME', 'JohnDoe'),
 
 ];
