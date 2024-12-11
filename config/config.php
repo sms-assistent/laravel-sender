@@ -8,27 +8,27 @@ return [
     | UserAgent to communicate with sms-assistent.by
     |--------------------------------------------------------------------------
     */
-    'agent' => env('SENDER_CONNECTION', 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)'),
+    'useragent' => env('SMS_ASSISTENT_USERAGENT', 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)'),
 
     /*
     |--------------------------------------------------------------------------
-    | Username to authenticate at sms-assistent.by
+    | Username (Login) to authenticate at sms-assistent.by
     |--------------------------------------------------------------------------
     */
-    'username' => env('SENDER_USERNAME', 'example'),
+    'username' => env('SMS_ASSISTENT_USERNAME', 'example'),
 
     /*
     |--------------------------------------------------------------------------
-    | Password to authenticate at sms-assistent.by
+    | API password to authenticate at sms-assistent.by
     |--------------------------------------------------------------------------
     */
-    'password' => env('SENDER_PASSWORD', 'qwerty'),
+    'password' => env('SMS_ASSISTENT_PASSWORD', ''),
 
     /*
     |--------------------------------------------------------------------------
-    | Name will be displayed to recipients
+    | Sender name will be displayed to recipients
     |--------------------------------------------------------------------------
     */
-    'name' => env('SENDER_NAME', 'JohnDoe'),
+    'sender_name' => env('SMS_ASSISTENT_SENDER_NAME', 'TEST-assist'),
 
 ];

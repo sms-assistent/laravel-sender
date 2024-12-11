@@ -1,7 +1,7 @@
 # SmsAssistent/Sender
 [![Latest Stable Version](https://poser.pugx.org/sms-assistent/laravel-sender/v/stable)](https://packagist.org/packages/sms-assistent/laravel-sender)
 [![Total Downloads](https://poser.pugx.org/sms-assistent/laravel-sender/downloads)](https://packagist.org/packages/sms-assistent/laravel-sender)
-[![PHP Version Require](http://poser.pugx.org/sms-assistent/laravel-sender/require/php)](https://packagist.org/packages/sms-assistent/laravel-sender)
+[![PHP Version Require](https://poser.pugx.org/sms-assistent/laravel-sender/require/php)](https://packagist.org/packages/sms-assistent/laravel-sender)
 [![License](https://poser.pugx.org/sms-assistent/laravel-sender/license)](https://packagist.org/packages/sms-assistent/laravel-sender)
 
 Sender - Laravel Provider for SMS-assistent.by

@@ -12,7 +12,7 @@ return [
     |
     */
     'Queued'    => 'Queued',
-    'Sent'      => 'Отправлено',
+    'Sent'      => 'Sent',
     'Delivered' => 'Delivered',
     'Expired'   => 'Expired',
     'Rejected'  => 'Rejected',
