@@ -23,6 +23,16 @@ Publish package files by running
 ```
 php artisan vendor:publish --provider="SmsAssistent\Sender\SenderServiceProvider"
 ```
+## Config
+
+To configure connection with SMS-assistent add these options to your ```.env```:
+
+```
+SMS_ASSISTENT_USERAGENT={useragent, optional}
+SMS_ASSISTENT_USERNAME={SMS-assistent login}
+SMS_ASSISTENT_PASSWORD={API password}
+SMS_ASSISTENT_SENDER_NAME={registered SMS sender name}
+```
 ## Usage
 
 Now, if you have configured ```Queues```, you can create a ```Job``` like this below in ```/App/Http/Jobs```
@@ -32,13 +42,12 @@ Now, if you have configured ```Queues```, you can create a ```Job``` like this b
 namespace App\Jobs;
 
 use SmsAssistent\Sender\Sender;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Queue\Queueable;
 
-class SMS extends Job implements ShouldQueue
+class SendSMS implements ShouldQueue
 {
-    use InteractsWithQueue, SerializesModels;
+    use Queueable;
 
     protected $to;
     protected $text;
@@ -60,15 +69,26 @@ class SMS extends Job implements ShouldQueue
 }
 ```
 
-And after dispatch a new Job anywhere in your app
+And after dispatch a new Job anywhere in your app like this
 ```
 <?php
 
-use App\Jobs\SMS;
+use App\Jobs\SendSMS;
 
-class SampleController
+class SampleController extends Controller
 {
-    $this->dispatch((new SMS( '+375295363600', 'Hello world!')))->delay(5));
+    public function test()
+    {
+        // Example 1
+        $this->dispatch((new SendSms('+375295363600', 'Hello world!')));
+
+        // Example 2
+        dispatch(new SendSms('+375295363600', 'Hello world!'));
+
+        // Example 3
+        SendSms::dispatch('+375295363600', 'Hello world!');
+    
+    }
 }
 ```
 
